@@ -1,2 +1,2 @@
-# Directory for tasks given on the first week of practice
+# Directory for the tasks given on the first week of practice
 ## Mentor - Kuzmich

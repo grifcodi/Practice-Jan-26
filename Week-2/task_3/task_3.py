@@ -1,30 +1,15 @@
-students = {
-    "Vasya": [],
-    "Petya": [],
-    "Bobby": [],
-}
-
+students = ["Vasya", "Petya", "Bobby"]
+grades = {}
 unique_grades = set()
 
-
 for name in students:
-    print(f"\nGrades for {name}:")
-    grades = []
-    for i in range(3):
-        grade = int(input(f"Grade {i + 1}: "))
-        grades.append(grade)
-        unique_grades.add(grade)
-    students[name] = grades
-
-average_grades = {}
-
-for name, grades in students.items():
-    average_grades[name] = sum(grades) / len(grades)
-
+    g = list(map(int, input(f"{name} (3 grades): ").split()))
+    grades[name] = g
+    unique_grades.update(g)
 
 print("\nAverage grades:")
-for name, avg in average_grades.items():
-    print(f"{name}: {avg:.2f}")
+for name, g in grades.items():
+    print(f"{name}: {sum(g) / len(g):.2f}")
 
 print("\nUnique grades:")
 print(unique_grades)

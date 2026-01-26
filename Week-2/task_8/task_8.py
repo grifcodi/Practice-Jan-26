@@ -10,7 +10,6 @@ class Circle(Shape):
         self.radius = radius
         self.pi = 3.14
     def area(self):
-
         return self.pi * self.radius ** 2
 
 class Rectangle(Shape):

@@ -1,20 +1,20 @@
 class Animal:
     def sound(self):
-        print("Animals make sound! Amazing!")
+        return "Animals make sound! Amazing!"
 
 class Dog(Animal):
     def sound(self):
-        print("Bark")
+        return "Bark"
 
 class Cat(Animal):
     def sound(self):
-        print("Meow")
+        return "Meow"
 
 class Cow(Animal):
     def sound(self):
-        print("Moo")
+        return "Moo"
 
 animals = [Dog(), Cat(), Cow()]
 
 for animal in animals:
-    animal.sound()
+    print(type(animal).__name__, ":", animal.sound())
